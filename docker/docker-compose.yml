@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: spring_boot_jwt
+    ports:
+      - '3308:3306'
+    volumes:
+      - spring-boot-jwt-db:/var/lib/mysql
+
+volumes:
+  spring-boot-jwt-db:
