@@ -27,6 +27,11 @@ public class User implements UserDetails {
 
     private String password;
 
+    public User(final String username, final String email) {
+        this.username = username;
+        this.email = email;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
