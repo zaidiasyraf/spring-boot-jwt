@@ -1,0 +1,17 @@
+version: '3.3'
+
+services:
+  db_test:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test
+    ports:
+      - '3310:3306'
+    volumes:
+      - spring-boot-jwt-test-db:/var/lib/mysql
+
+
+volumes:
+  spring-boot-jwt-test-db:
